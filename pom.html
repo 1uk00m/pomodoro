@@ -71,7 +71,7 @@
             <button id="short-break">Short Break</button>
             <button id="long-break">Long Break</button>
         </div>
-		<h1>25:00</h1>
+		<h1>15:00</h1>
 		<button id="start">Start</button>
 		<button id="reset">Reset</button>
         <div class="volume-control">
@@ -93,7 +93,7 @@
         const volumeControl = document.querySelector('#volume');
         const alarm = document.querySelector('#alarm');
 
-		let time = 1500;
+		let time = 900;
 		let countdown;
 
 		function updateTimer() {
@@ -107,7 +107,7 @@
 				time--;
 				if (time < 0) {
 					clearInterval(countdown);
-					timer.textContent = '25:00';
+					timer.textContent = '15:00';
                     alarm.play();
 				} else {
 					updateTimer();
@@ -117,13 +117,13 @@
 
 		function resetTimer() {
 			clearInterval(countdown);
-			time = 1500;
+			time = 900;
 			updateTimer();
 		}
 
 		pomodoroButton.addEventListener('click', () => {
 			clearInterval(countdown);
-			time = 1500;
+			time = 900;
 			updateTimer();
 		});
 
