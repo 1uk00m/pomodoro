@@ -93,7 +93,7 @@
         const volumeControl = document.querySelector('#volume');
         const alarm = document.querySelector('#alarm');
 
-		let time = 900;
+		let time = 1500;
 		let countdown;
 
 		function updateTimer() {
@@ -107,7 +107,7 @@
 				time--;
 				if (time < 0) {
 					clearInterval(countdown);
-					timer.textContent = '15:00';
+					timer.textContent = '25:00';
                     alarm.play();
 				} else {
 					updateTimer();
@@ -117,13 +117,13 @@
 
 		function resetTimer() {
 			clearInterval(countdown);
-			time = 900;
+			time = 1500;
 			updateTimer();
 		}
 
 		pomodoroButton.addEventListener('click', () => {
 			clearInterval(countdown);
-			time = 900;
+			time = 1500;
 			updateTimer();
 		});
 
